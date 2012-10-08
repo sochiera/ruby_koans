@@ -15,8 +15,8 @@
 #
 def triangle(a, b, c)
 	a,b,c = [a,b,c].sort
-	if a + b < c
-		return nil
+	if a + b <= c
+		raise TriangleError
 	end
 	size = ([a,b,c] & [a,b,c]).size
 	if size == 1
